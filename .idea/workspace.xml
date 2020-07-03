@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="43c3d89b-16b7-4aaf-b0e2-0afbe19f1ff2" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="TestNG Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1eB0qiOeEe1MdkLrCUTnaUaCSYm" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="TestNG" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG" value="" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="0d570cb2-96df-43cc-80da-7f777e6d0afe" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="test.traulko.task5.service.impl" />
+      <recent name="test.traulko.task5.validator" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.traulko.task5.exception" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.CharArrayChangeTextImplTest.replaceCharacterExceptionTest">
+    <configuration name="CharArrayChangeTextImplTest.replaceCharacterExceptionTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="epamday5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.traulko.task5.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.traulko.task5.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="test.traulko.task5.service.impl.CharArrayChangeTextImplTest" />
+      <option name="METHOD_NAME" value="replaceCharacterExceptionTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CharArrayChangeTextImplTest.replaceCharacterNegativeTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="epamday5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.traulko.task5.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.traulko.task5.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="test.traulko.task5.service.impl.CharArrayChangeTextImplTest" />
+      <option name="METHOD_NAME" value="replaceCharacterNegativeTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CharArrayChangeTextImplTest.replaceCharacterPositiveTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="epamday5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.traulko.task5.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.traulko.task5.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="test.traulko.task5.service.impl.CharArrayChangeTextImplTest" />
+      <option name="METHOD_NAME" value="replaceCharacterPositiveTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomValidatorTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="epamday5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.traulko.task5.validator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.traulko.task5.validator" />
+      <option name="MAIN_CLASS_NAME" value="test.traulko.task5.validator.CustomValidatorTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.CharArrayChangeTextImplTest.replaceCharacterExceptionTest" />
+        <item itemvalue="TestNG.CharArrayChangeTextImplTest.replaceCharacterNegativeTest" />
+        <item itemvalue="TestNG.CharArrayChangeTextImplTest.replaceCharacterPositiveTest" />
+        <item itemvalue="TestNG.CustomValidatorTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="43c3d89b-16b7-4aaf-b0e2-0afbe19f1ff2" name="Default Changelist" comment="" />
+      <created>1593779871303</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1593779871303</updated>
+      <workItem from="1593779878314" duration="7619000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1593785982565">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1593785982565" />
+    <state x="399" y="101" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1593786203703">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="399" y="101" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1536.824@0.0.1536.824" timestamp="1593786203703" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1593788880372">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1593788880372" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1593788880372">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1593788880372" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1593788880372">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1593788880372" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1593788880372">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1593788880372" />
+    <state x="540" y="115" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1593787852043">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="540" y="115" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1593787852043" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1593782519447">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1593782519447" />
+  </component>
+</project>
