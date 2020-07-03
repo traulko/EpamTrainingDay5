@@ -5,30 +5,29 @@ import com.traulko.task5.service.DeleteTextComponent;
 
 public class StringDeleteTextComponentImpl implements DeleteTextComponent {
     public static final String VOWELS = "aeiouаоеёюиуыэя";
-    public static final String CHARACTER_EXCEPT_LETTER = "[\\p{Punct}\\d]";
+    public static final String EXCEPT_LETTER = "[\\p{Punct}\\d]";
 
     @Override
     public String deleteSymbolsExceptLetters(String text) throws IncorrectValueException {
         if ((text == null) || (text.isEmpty())) {
-            throw  new IncorrectValueException("incorrect data");
+            throw new IncorrectValueException("Incorrect parameter");
         }
-        return text.replaceAll(CHARACTER_EXCEPT_LETTER," ");
+        return text.replaceAll(EXCEPT_LETTER, " ");
     }
 
     @Override
     public String deleteWordOfGivenLength(String text, int length) throws IncorrectValueException {
         if ((text == null) || (text.isEmpty()) || (length <= 0)) {
-            throw new IncorrectValueException("incorrect data");
+            throw new IncorrectValueException("Incorrect parameters");
         }
         String[] words = text.split(" ");
         StringBuilder stringBuilder = new StringBuilder();
-
         for (String word : words) {
-            String wordWithoutPunctuation = deleteSymbolsExceptLetters(word);
-            wordWithoutPunctuation = wordWithoutPunctuation.replace(" ", "");
-            if ((wordWithoutPunctuation.length() == length)
-                    && (isFirstWordSymbolConsonant(wordWithoutPunctuation))) {
-                if ((word.length() != wordWithoutPunctuation.length())) {
+            String wordOnlyLetters = deleteSymbolsExceptLetters(word);
+            wordOnlyLetters = wordOnlyLetters.replace(" ", "");
+            if ((wordOnlyLetters.length() == length)
+                    && (isFirstWordSymbolConsonant(wordOnlyLetters))) {
+                if ((word.length() != wordOnlyLetters.length())) {
                     char lastCharacter = word.charAt(word.length() - 1);
                     stringBuilder.append(lastCharacter);
                     stringBuilder.append(" ");
@@ -38,12 +37,11 @@ public class StringDeleteTextComponentImpl implements DeleteTextComponent {
                 stringBuilder.append(" ");
             }
         }
-        return stringBuilder.toString();
+        return stringBuilder.toString().trim();
     }
 
     private boolean isFirstWordSymbolConsonant(String word) {
         char firstSymbol = Character.toLowerCase(word.charAt(0));
-
-        return (VOWELS.indexOf(firstSymbol) == -1);
+        return (VOWELS.indexOf(firstSymbol) != -1);
     }
 }

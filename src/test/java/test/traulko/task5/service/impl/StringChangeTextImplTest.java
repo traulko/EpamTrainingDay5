@@ -1,33 +1,33 @@
 package test.traulko.task5.service.impl;
 
 import com.traulko.task5.exception.IncorrectValueException;
-import com.traulko.task5.service.impl.CharArrayChangeTextImpl;
+import com.traulko.task5.service.impl.StringChangeTextImpl;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.*;
 
-public class CharArrayChangeTextImplTest {
-    CharArrayChangeTextImpl charArrayChangeText;
+public class StringChangeTextImplTest {
+    StringChangeTextImpl stringChangeText;
 
     @BeforeMethod
     public void setUp() {
-        charArrayChangeText = new CharArrayChangeTextImpl();
+        stringChangeText = new StringChangeTextImpl();
     }
 
     @AfterMethod
     public void tearDown() {
-        charArrayChangeText = null;
+        stringChangeText = null;
     }
 
     @Test
     public void replaceCharacterPositiveTest() {
         String text = "A credit card is an indispensable part of life in America.";
         try {
-            String actual = charArrayChangeText.replaceCharacter(text, 1, "0");
-            String expected = "A c0edit c0rd i0 a0 i0dispensable p0rt o0 l0fe i0 A0erica.";
-            assertEquals(actual, expected, "replaceCharacterPositiveTest failed as...");
+            String actual = stringChangeText.replaceCharacter(text, 2, "g");
+            String expected = "A crgdit cagd is an ingispensable pagt of lige in Amgrica.";
+            assertEquals(actual, expected, "replaceSubstringCertainLengthPositiveTest failed as...");
         } catch (IncorrectValueException e) {
             fail(e.getMessage());
         }
@@ -37,9 +37,9 @@ public class CharArrayChangeTextImplTest {
     public void replaceCharacterNegativeTest() {
         String text = "A credit card is an indispensable part of life in America.";
         try {
-            String actual = charArrayChangeText.replaceCharacter(text, 1, "0");
+            String actual = stringChangeText.replaceCharacter(text, 2, "g");
             String expected = "A credit card is an indispensable part of life in America.";
-            assertNotEquals(actual, expected, "replaceCharacterNegativeTest failed as...");
+            assertNotEquals(actual, expected, "replaceSubstringCertainLengthNegativeTest failed as...");
         } catch (IncorrectValueException e) {
             fail(e.getMessage());
         }
@@ -47,15 +47,15 @@ public class CharArrayChangeTextImplTest {
 
     @Test(expectedExceptions = IncorrectValueException.class)
     public void replaceCharacterExceptionTest() throws IncorrectValueException {
-        charArrayChangeText.replaceCharacter(null, 0, "g");
+        stringChangeText.replaceCharacter(null, 0, "q");
     }
 
     @Test
     public void fixMistakePositiveTest() {
-        String text = "Hello wordl!";
+        String text = "A credit card is an indispensable part of life in America.";
         try {
-            String actual = charArrayChangeText.fixMistake(text, "wordl", "world");
-            String expected = "Hello world!";
+            String actual = stringChangeText.fixMistake(text, "i", "q");
+            String expected = "A credqt card qs an qndqspensable part of lqfe qn Amerqca.";
             assertEquals(actual, expected, "fixMistakePositiveTest failed as...");
         } catch (IncorrectValueException e) {
             fail(e.getMessage());
@@ -64,11 +64,11 @@ public class CharArrayChangeTextImplTest {
 
     @Test
     public void fixMistakeNegativeTest() {
-        String text = "Hello wordl!";
+        String text = "A credit card is an indispensable part of life in America.";
         try {
-            String actual = charArrayChangeText.fixMistake(text, "wordl", "world");
-            String expected = "Hello world!";
-            assertEquals(actual, expected, "fixMistakeNegativeTest failed as..");
+            String actual = stringChangeText.fixMistake(text, "i", "q");
+            String expected = "A credit card is an indispensable part of life in America.";
+            assertNotEquals(actual, expected, "fixMistakeNegativeTest failed as...");
         } catch (IncorrectValueException e) {
             fail(e.getMessage());
         }
@@ -76,15 +76,15 @@ public class CharArrayChangeTextImplTest {
 
     @Test(expectedExceptions = IncorrectValueException.class)
     public void fixMistakeExceptionTest() throws IncorrectValueException {
-        charArrayChangeText.fixMistake(null, null, null);
+        stringChangeText.fixMistake(null, null, null);
     }
 
     @Test
     public void replaceSubstringCertainLengthPositiveTest() {
         String text = "A credit card is an indispensable part of life in America.";
         try {
-            String actual = charArrayChangeText.replaceSubstringCertainLength(text, "part", 2);
-            String expected = "A credit card part part indispensable part part life part America.";
+            String actual = stringChangeText.replaceSubstringCertainLength(text, "card", 4);
+            String expected = "A credit card is an indispensable card of card in America.";
             assertEquals(actual, expected, "replaceSubstringCertainLengthPositiveTest failed as...");
         } catch (IncorrectValueException e) {
             fail(e.getMessage());
@@ -95,8 +95,8 @@ public class CharArrayChangeTextImplTest {
     public void replaceSubstringCertainLengthNegativeTest() {
         String text = "A credit card is an indispensable part of life in America.";
         try {
-            String actual = charArrayChangeText.replaceSubstringCertainLength(text, "part", 3);
-            String expected = "A credit card part part indispensable part part life part America.";
+            String actual = stringChangeText.replaceSubstringCertainLength(text, "card", 4);
+            String expected = "A credit card is an indispensable part of life in America.";
             assertNotEquals(actual, expected, "replaceSubstringCertainLengthNegativeTest failed as...");
         } catch (IncorrectValueException e) {
             fail(e.getMessage());
@@ -105,6 +105,6 @@ public class CharArrayChangeTextImplTest {
 
     @Test(expectedExceptions = IncorrectValueException.class)
     public void replaceSubstringCertainLengthExceptionTest() throws IncorrectValueException {
-        charArrayChangeText.replaceSubstringCertainLength(null, null, 0);
+        stringChangeText.replaceSubstringCertainLength(null, null, 0);
     }
 }

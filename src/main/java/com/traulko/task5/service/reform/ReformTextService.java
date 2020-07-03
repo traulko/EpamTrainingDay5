@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReformTextService {
-    public String updateText(List<String> words) throws IncorrectValueException {
+    public String getWordsStringFormat(List<String> words) throws IncorrectValueException {
         if (words == null || words.isEmpty()) {
             throw new IncorrectValueException("Incorrect words list");
         }
@@ -15,7 +15,7 @@ public class ReformTextService {
         for (String word : words) {
             text.append(word);
         }
-        return text.toString();
+        return text.toString().trim();
     }
 
     // TODO: 03.07.2020  
@@ -25,7 +25,7 @@ public class ReformTextService {
         }
         List<String> words = new ArrayList<>();
         char[] charArray = text.toCharArray();
-        StringBuilder word =new StringBuilder();
+        StringBuilder word = new StringBuilder();
         for (int i = 0; i < text.length(); i++) {
             if (Character.isLetter(charArray[i])) {
                 word.append(charArray[i]);

@@ -8,15 +8,15 @@ import java.util.regex.Pattern;
 
 public class RegexDeleteTextComponentImpl implements DeleteTextComponent {
     public static final String VOWELS = "aeiouyуеыаоэяию";
-    public static final String SYMBOL_EXCEPT_LETTER = "[\\p{Punct}\\d]";
-    public static final String WORD_CERTAIN_LENGTH = "\\b(\\p{L})\\p{L}{%d}\\b";
+    public static final String EXCEPT_LETTER = "[\\p{Punct}\\d]";
+    public static final String CERTAIN_LENGTH_WORD = "\\b(\\p{L})\\p{L}{%d}\\b";
 
     @Override
     public String deleteSymbolsExceptLetters(String text) throws IncorrectValueException {
         if ((text == null) || (text.isEmpty())) {
-            throw  new IncorrectValueException("incorrect data");
+            throw new IncorrectValueException("incorrect data");
         }
-        Pattern pattern = Pattern.compile(SYMBOL_EXCEPT_LETTER);
+        Pattern pattern = Pattern.compile(EXCEPT_LETTER);
         Matcher matcher = pattern.matcher(text);
         return matcher.replaceAll(" ");
     }
@@ -27,7 +27,7 @@ public class RegexDeleteTextComponentImpl implements DeleteTextComponent {
             throw new IncorrectValueException("incorrect data");
         }
         StringBuffer stringBuffer = new StringBuffer();
-        Pattern pattern = Pattern.compile(String.format(WORD_CERTAIN_LENGTH, length - 1));
+        Pattern pattern = Pattern.compile(String.format(CERTAIN_LENGTH_WORD, length - 1));
         Matcher matcher = pattern.matcher(text);
         while (matcher.find()) {
             if (isFirstWordSymbolConsonant(matcher.group(1))) {
@@ -40,6 +40,6 @@ public class RegexDeleteTextComponentImpl implements DeleteTextComponent {
 
     private boolean isFirstWordSymbolConsonant(String word) {
         char firstSymbol = Character.toLowerCase(word.charAt(0));
-        return (VOWELS.indexOf(firstSymbol) == -1);
+        return VOWELS.indexOf(firstSymbol) != -1;
     }
 }
